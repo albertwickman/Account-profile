@@ -1,0 +1,65 @@
+public class profile {
+    String name;
+    int age;
+    float balance;
+    String occupation;
+    String gender;
+
+    public static void main(String[] args) {
+    profile a = new profile();
+    a.setName("Albertwickman");
+    a.setAge(22);
+    a.setBalance(2938.39f);
+    a.setOccupation("Retail");
+    a.setGender("Male");
+
+    System.out.println("Welcome! This is your profile...");
+    System.out.println("");
+    System.out.println("Username: "+a.getName());
+    System.out.println("Age: "+a.getAge());
+    System.out.println("Account balance: $"+a.getBalance());
+    System.out.println("Current occupation: "+a.getOccupation());
+    System.out.println("Gender: "+a.getGender());
+    }
+
+    //Tip: Cmd+N to get getters and setters with constructor
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public float getBalance() {
+        return balance;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+}
