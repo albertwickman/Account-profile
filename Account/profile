@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
 public class profile {
     String name;
     int age;
@@ -5,7 +8,7 @@ public class profile {
     String occupation;
     String gender;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
     profile a = new profile();
     a.setName("Albertwickman");
     a.setAge(22);
@@ -14,12 +17,35 @@ public class profile {
     a.setGender("Male");
 
     System.out.println("Welcome! This is your profile...");
+    TimeUnit.SECONDS.sleep(1);
+    System.out.print("Loading");
+    TimeUnit.SECONDS.sleep(1);
+    System.out.print(".");
+    TimeUnit.SECONDS.sleep(1);
+    System.out.print(".");
+    TimeUnit.SECONDS.sleep(1);
+    System.out.print(".");
+    TimeUnit.SECONDS.sleep(1);
+    System.out.println("");
     System.out.println("");
     System.out.println("Username: "+a.getName());
     System.out.println("Age: "+a.getAge());
     System.out.println("Account balance: $"+a.getBalance());
     System.out.println("Current occupation: "+a.getOccupation());
     System.out.println("Gender: "+a.getGender());
+    TimeUnit.SECONDS.sleep(1);
+
+    Scanner addAmount = new Scanner(System.in);
+    float addedBalance;
+    System.out.println("");
+    System.out.println("Enter desired amount: ");
+    addedBalance = addAmount.nextInt();
+    float sum = a.getBalance() + addedBalance;
+    System.out.println("Adding to account...");
+    TimeUnit.SECONDS.sleep(2);
+    System.out.println("");
+    System.out.println("You have added $"+addedBalance);
+    System.out.println("Your new balance is: $" +sum);
     }
 
     //Tip: Cmd+N to get getters and setters with constructor
